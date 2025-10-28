@@ -1,0 +1,6 @@
+﻿{
+  "name": "GameFrameX.ShareSdk.Editor",
+  "references": [
+    "GUID:5ef4ef0d38e592c48b732d386f5e9e6e"
+  ]
+}
