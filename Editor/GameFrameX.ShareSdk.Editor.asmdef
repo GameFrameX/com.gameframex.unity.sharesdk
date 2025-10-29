@@ -1,18 +1,19 @@
 {
-    "name": "GameFrameX.ShareSdk.Editor",
-    "rootNamespace": "",
-    "references": [
-        "GameFrameX.ShareSdk.Runtime"
-    ],
-    "includePlatforms": [
-        "Editor"
-    ],
-    "excludePlatforms": [],
-    "allowUnsafeCode": false,
-    "overrideReferences": false,
-    "precompiledReferences": [],
-    "autoReferenced": true,
-    "defineConstraints": [],
-    "versionDefines": [],
-    "noEngineReferences": false
+  "name": "GameFrameX.ShareSdk.Editor",
+  "rootNamespace": "",
+  "references": [
+    "GameFrameX.Editor",
+    "GameFrameX.ShareSdk.Runtime"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
 }

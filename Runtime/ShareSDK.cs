@@ -50,8 +50,6 @@ namespace cn.sharesdk.unity3d
     {
         //版本号，每次发布新版本都需要更新
         public static string version = "3.0.4";
-        public string appKey = "3be8b350af31a";
-        public string appSecret = "80831a57146aa974277edc907df9243d";
 #if UNITY_IPHONE || UNITY_IOS
 		public string mobNetLater = "2";
 		public string mobTwitterVer = "2";
