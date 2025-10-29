@@ -68,11 +68,12 @@ namespace cn.sharesdk.unity3d
         private EventHandler getFriendsHandler;
         private EventHandler followFriendHandler;
         private EventHandler clientValidForAndroidHandler;
+        private Hashtable platformConfigs;
 
-        void Awake()
+        void DevInfoHandler()
         {
             Type type = devInfo.GetType();
-            Hashtable platformConfigs = new Hashtable();
+            platformConfigs = new Hashtable();
             FieldInfo[] devInfoFields = type.GetFields();
             foreach (FieldInfo devInfoField in devInfoFields)
             {
@@ -98,7 +99,10 @@ namespace cn.sharesdk.unity3d
 
                 platformConfigs.Add(platformId, table);
             }
+        }
 
+        void Awake()
+        {
 #if UNITY_ANDROID
             sdk = new AndroidImpl(gameObject);
             sdk.PrepareLoopShare();
@@ -106,8 +110,6 @@ namespace cn.sharesdk.unity3d
 #elif UNITY_IPHONE
 			sdk = new iOSImpl(gameObject);
 #endif
-
-            sdk.SetPlatformConfig(platformConfigs);
         }
 
         private EventComponent eventComponent;
@@ -119,6 +121,9 @@ namespace cn.sharesdk.unity3d
             this.followFriendHandler = FollowFriendHandler;
             this.getFriendsHandler = GetFriendsHandler;
             this.showUserHandler = ShowUserHandler;
+            DevInfoHandler();
+            sdk.SetPlatformConfig(platformConfigs);
+
             eventComponent = GameEntry.GetComponent<EventComponent>();
             if (eventComponent == null)
             {

@@ -91,7 +91,7 @@ namespace cn.sharesdk.unity3d
 
         public override void SetPlatformConfig(Hashtable configs)
         {
-            String json = MiniJSON.jsonEncode(configs);
+            var json = MiniJSON.jsonEncode(configs);
             Debug.Log("AndroidImpl  ===>>>  SetPlatformConfig === " + json);
             if (ssdk != null)
             {
@@ -104,6 +104,7 @@ namespace cn.sharesdk.unity3d
             Debug.Log("AndroidImpl  ===>>>  Authorize");
             if (ssdk != null)
             {
+                Debug.Log("AndroidImpl  ===>>>  Authorize === " + reqID + " === " + platform);
                 ssdk.Call("authorize", reqID, (int)platform);
             }
         }

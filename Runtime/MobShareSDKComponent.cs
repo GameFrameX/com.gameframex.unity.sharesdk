@@ -69,11 +69,7 @@ namespace GameFrameX.Login.MobShareSDK.Runtime
             IsAutoRegister = false;
             base.Awake();
             shareSDK = GetComponent<ShareSDK>();
-        }
 
-        [UnityEngine.Scripting.Preserve]
-        public void Start()
-        {
             var types = Utility.Assembly.GetTypes();
             foreach (var type in types)
             {
@@ -87,7 +83,11 @@ namespace GameFrameX.Login.MobShareSDK.Runtime
                     component.Init();
                 }
             }
+        }
 
+        [UnityEngine.Scripting.Preserve]
+        public void Start()
+        {
             shareSDK.InitSDK(m_AppId, m_AppKey);
         }
     }
