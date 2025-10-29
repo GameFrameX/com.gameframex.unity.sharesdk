@@ -112,20 +112,20 @@ namespace cn.sharesdk.unity3d
 #endif
         }
 
-        private EventComponent eventComponent;
+        private EventComponent _eventComponent;
 
         private void Start()
         {
-            this.authHandler = AuthHandler;
-            this.shareHandler = ShareHandler;
-            this.followFriendHandler = FollowFriendHandler;
-            this.getFriendsHandler = GetFriendsHandler;
-            this.showUserHandler = ShowUserHandler;
+            authHandler = AuthHandler;
+            shareHandler = ShareHandler;
+            followFriendHandler = FollowFriendHandler;
+            getFriendsHandler = GetFriendsHandler;
+            showUserHandler = ShowUserHandler;
             DevInfoHandler();
             sdk.SetPlatformConfig(platformConfigs);
 
-            eventComponent = GameEntry.GetComponent<EventComponent>();
-            if (eventComponent == null)
+            _eventComponent = GameEntry.GetComponent<EventComponent>();
+            if (_eventComponent == null)
             {
                 Log.Error("eventComponent is null");
             }
@@ -133,27 +133,27 @@ namespace cn.sharesdk.unity3d
 
         private void ShowUserHandler(int requestId, ResponseState state, PlatformType type, Hashtable data)
         {
-            eventComponent.Fire(this, ShowUserEventArgs.Create(state, type, data));
+            _eventComponent.Fire(this, ShowUserEventArgs.Create(state, type, data));
         }
 
         private void GetFriendsHandler(int requestId, ResponseState state, PlatformType type, Hashtable data)
         {
-            eventComponent.Fire(this, GetFriendsEventArgs.Create(state, type, data));
+            _eventComponent.Fire(this, GetFriendsEventArgs.Create(state, type, data));
         }
 
         private void FollowFriendHandler(int requestId, ResponseState state, PlatformType type, Hashtable data)
         {
-            eventComponent.Fire(this, FollowFriendEventArgs.Create(state, type, data));
+            _eventComponent.Fire(this, FollowFriendEventArgs.Create(state, type, data));
         }
 
         private void ShareHandler(int requestId, ResponseState state, PlatformType type, Hashtable data)
         {
-            eventComponent.Fire(this, ShareEventArgs.Create(state, type, data));
+            _eventComponent.Fire(this, ShareEventArgs.Create(state, type, data));
         }
 
         private void AuthHandler(int requestId, ResponseState state, PlatformType type, Hashtable data)
         {
-            eventComponent.Fire(this, AuthEventArgs.Create(state, type, data));
+            _eventComponent.Fire(this, AuthEventArgs.Create(state, type, data));
         }
 
         public delegate void EventHandler(int reqID, ResponseState state, PlatformType type, Hashtable data);
