@@ -62,12 +62,12 @@ namespace cn.sharesdk.unity3d
         private int reqID;
         public DevInfoSet devInfo;
         public ShareSDKImpl sdk;
-        private EventHandler authHandler;
-        private EventHandler shareHandler;
-        private EventHandler showUserHandler;
-        private EventHandler getFriendsHandler;
-        private EventHandler followFriendHandler;
-        private EventHandler clientValidForAndroidHandler;
+        private Action<int, ResponseState, PlatformType, Hashtable> authHandler;
+        private Action<int, ResponseState, PlatformType, Hashtable> shareHandler;
+        private Action<int, ResponseState, PlatformType, Hashtable> showUserHandler;
+        private Action<int, ResponseState, PlatformType, Hashtable> getFriendsHandler;
+        private Action<int, ResponseState, PlatformType, Hashtable> followFriendHandler;
+        private Action<int, ResponseState, PlatformType, Hashtable> clientValidForAndroidHandler;
         private Hashtable platformConfigs;
 
         void DevInfoHandler()
@@ -155,8 +155,6 @@ namespace cn.sharesdk.unity3d
         {
             _eventComponent.Fire(this, AuthEventArgs.Create(state, type, data));
         }
-
-        public delegate void EventHandler(int reqID, ResponseState state, PlatformType type, Hashtable data);
 
         private void _Callback(string data)
         {
