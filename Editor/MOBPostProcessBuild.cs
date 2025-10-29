@@ -39,9 +39,10 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System;
 using System.Linq;
 using cn.sharesdk.unity3d;
+#if UNITY_IOS
 using UnityEditor.iOS.Xcode;
 using UnityEditor.iOS.Xcode.Extensions;
-
+#endif
 
 #if UNITY_IOS
 using UnityEditor.iOS.Xcode;
