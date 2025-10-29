@@ -49,6 +49,7 @@ namespace cn.sharesdk.unity3d
         public abstract void InitSDK(string appKey);
 
         public abstract void InitSDK(string appKey, string secret);
+        public abstract void SetDebug(bool isDebug);
 
         /// <summary>
         /// add listener for loopshare

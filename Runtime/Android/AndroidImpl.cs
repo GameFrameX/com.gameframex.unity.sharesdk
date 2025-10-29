@@ -71,6 +71,15 @@ namespace cn.sharesdk.unity3d
             }
         }
 
+        public override void SetDebug(bool isDebug)
+        {
+            Debug.Log("AndroidImpl  ===>>>  SetDebug === " + isDebug);
+            if (ssdk != null)
+            {
+                ssdk.Call("setDEBUG", isDebug);
+            }
+        }
+
         public override void PrepareLoopShare()
         {
             Debug.Log("AndroidImpl  ===>>>  PrepareLoopShare ");

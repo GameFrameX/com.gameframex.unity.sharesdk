@@ -40,6 +40,7 @@ namespace GameFrameX.Login.MobShareSDK.Editor
     {
         private SerializedProperty m_AppId = null;
         private SerializedProperty m_AppKey = null;
+        private SerializedProperty m_IsDebug = null;
 
         public override void OnInspectorGUI()
         {
@@ -48,6 +49,7 @@ namespace GameFrameX.Login.MobShareSDK.Editor
             serializedObject.Update();
             EditorGUI.BeginDisabledGroup(EditorApplication.isPlayingOrWillChangePlaymode);
             {
+                EditorGUILayout.PropertyField(m_IsDebug);
                 EditorGUILayout.HelpBox("从https://new.dashboard.mob.com/ 获取", MessageType.Warning);
                 EditorGUILayout.PropertyField(m_AppId);
                 EditorGUILayout.PropertyField(m_AppKey);
@@ -63,6 +65,7 @@ namespace GameFrameX.Login.MobShareSDK.Editor
         {
             m_AppId = serializedObject.FindProperty("m_AppId");
             m_AppKey = serializedObject.FindProperty("m_AppKey");
+            m_IsDebug = serializedObject.FindProperty("m_IsDebug");
         }
     }
 }

@@ -390,6 +390,11 @@ namespace cn.sharesdk.unity3d
             sdk.InitSDK(appKey, appSecret);
         }
 
+        public void SetDebug(bool isDebug)
+        {
+            sdk.SetDebug(isDebug);
+        }
+
         public void SetPlatformConfig(Hashtable configInfo)
         {
             sdk.SetPlatformConfig(configInfo);

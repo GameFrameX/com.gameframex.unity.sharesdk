@@ -47,6 +47,11 @@ namespace GameFrameX.Login.MobShareSDK.Runtime
     public class MobShareSDKComponent : GameFrameworkComponent
     {
         /// <summary>
+        /// 是否开启调试模式。
+        /// </summary>
+        [SerializeField] private bool m_IsDebug = false;
+
+        /// <summary>
         /// App Id
         /// </summary>
         [SerializeField] private string m_AppId = string.Empty;
@@ -88,6 +93,7 @@ namespace GameFrameX.Login.MobShareSDK.Runtime
         [UnityEngine.Scripting.Preserve]
         public void Start()
         {
+            shareSDK.SetDebug(m_IsDebug);
             shareSDK.InitSDK(m_AppId, m_AppKey);
         }
     }
