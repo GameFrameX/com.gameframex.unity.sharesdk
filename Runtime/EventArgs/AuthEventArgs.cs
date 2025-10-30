@@ -48,7 +48,7 @@ namespace GameFrameX.ShareSdk.Runtime
 
         public override void Clear()
         {
-            Data.Clear();
+            Data?.Clear();
             Type = PlatformType.Unknown;
             State = ResponseState.BeginUPLoad;
         }
