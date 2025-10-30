@@ -509,7 +509,9 @@ namespace cn.sharesdk.unity3d
 
         public Hashtable GetAuthInfo(PlatformType platform)
         {
-            return sdk.GetAuthInfo(platform);
+            var result = sdk.GetAuthInfo(platform);
+            Log.Debug($"GetAuthInfo: {result.toJson()}");
+            return result;
         }
 
         public void DisableSSO(bool open)
