@@ -44,7 +44,7 @@ namespace GameFrameX.ShareSdk.Runtime
         /// <summary>
         /// 
         /// </summary>
-        public static readonly string EventId = typeof(AuthEventArgs).FullName;
+        public static readonly string EventId = typeof(ShareEventArgs).FullName;
 
         public override void Clear()
         {
