@@ -157,8 +157,8 @@ namespace cn.sharesdk.unity3d
 
         private void AuthHandler(int requestId, ResponseState state, PlatformType type, Hashtable data)
         {
-            Log.Debug($"AuthHandler, state: {state}, type: {type}, data: {data.toJson()}");
-            _eventComponent.Fire(this, AuthEventArgs.Create(state, type, data));
+            Log.Debug($"AuthHandler, state: {state}, type: {type}");
+            _eventComponent.Fire(this, AuthEventArgs.Create(state, type));
         }
 
         private void _Callback(string data)
