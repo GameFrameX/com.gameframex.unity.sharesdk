@@ -133,26 +133,31 @@ namespace cn.sharesdk.unity3d
 
         private void ShowUserHandler(int requestId, ResponseState state, PlatformType type, Hashtable data)
         {
+            Log.Debug($"ShowUserHandler, state: {state}, type: {type}, data: {data.toJson()}");
             _eventComponent.Fire(this, ShowUserEventArgs.Create(state, type, data));
         }
 
         private void GetFriendsHandler(int requestId, ResponseState state, PlatformType type, Hashtable data)
         {
+            Log.Debug($"GetFriendsHandler, state: {state}, type: {type}, data: {data.toJson()}");
             _eventComponent.Fire(this, GetFriendsEventArgs.Create(state, type, data));
         }
 
         private void FollowFriendHandler(int requestId, ResponseState state, PlatformType type, Hashtable data)
         {
+            Log.Debug($"FollowFriendHandler, state: {state}, type: {type}, data: {data.toJson()}");
             _eventComponent.Fire(this, FollowFriendEventArgs.Create(state, type, data));
         }
 
         private void ShareHandler(int requestId, ResponseState state, PlatformType type, Hashtable data)
         {
+            Log.Debug($"ShareHandler, state: {state}, type: {type}, data: {data.toJson()}");
             _eventComponent.Fire(this, ShareEventArgs.Create(state, type, data));
         }
 
         private void AuthHandler(int requestId, ResponseState state, PlatformType type, Hashtable data)
         {
+            Log.Debug($"AuthHandler, state: {state}, type: {type}, data: {data.toJson()}");
             _eventComponent.Fire(this, AuthEventArgs.Create(state, type, data));
         }
 
