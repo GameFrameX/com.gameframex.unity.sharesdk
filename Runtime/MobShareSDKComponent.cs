@@ -35,7 +35,7 @@ using GameFrameX.Runtime;
 using GameFrameX.ShareSdk.Runtime;
 using UnityEngine;
 
-namespace GameFrameX.Login.MobShareSDK.Runtime
+namespace GameFrameX.MobShareSDK.Runtime
 {
     /// <summary>
     /// Share SDK 组件。
@@ -44,6 +44,7 @@ namespace GameFrameX.Login.MobShareSDK.Runtime
     [AddComponentMenu("Game Framework/Mob Share SDK")]
     [UnityEngine.Scripting.Preserve]
     [RequireComponent(typeof(cn.sharesdk.unity3d.ShareSDK))]
+    [RequireComponent(typeof(cn.sharesdk.unity3d.MobSDK))]
     public class MobShareSDKComponent : GameFrameworkComponent
     {
         /// <summary>
@@ -67,6 +68,11 @@ namespace GameFrameX.Login.MobShareSDK.Runtime
         private ShareSDK shareSDK = null;
 
         /// <summary>
+        /// Mob SDK 组件。
+        /// </summary>
+        private MobSDK mobSdk;
+
+        /// <summary>
         /// 游戏框架组件初始化。
         /// </summary>
         protected override void Awake()
@@ -74,6 +80,7 @@ namespace GameFrameX.Login.MobShareSDK.Runtime
             IsAutoRegister = false;
             base.Awake();
             shareSDK = GetComponent<ShareSDK>();
+            mobSdk = GetComponent<MobSDK>();
 
             var types = Utility.Assembly.GetTypes();
             foreach (var type in types)
@@ -95,6 +102,16 @@ namespace GameFrameX.Login.MobShareSDK.Runtime
         {
             shareSDK.SetDebug(m_IsDebug);
             shareSDK.InitSDK(m_AppId, m_AppKey);
+        }
+
+        /// <summary>
+        /// 提交隐私授权结果
+        /// </summary>
+        /// <param name="granted">是否授权</param>
+        [UnityEngine.Scripting.Preserve]
+        public void SubmitPolicyGrantResult(bool granted = true)
+        {
+            mobSdk.submitPolicyGrantResult(granted);
         }
     }
 }

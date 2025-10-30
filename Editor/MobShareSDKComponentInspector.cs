@@ -30,10 +30,10 @@
 // ==========================================================================================
 
 using GameFrameX.Editor;
-using GameFrameX.Login.MobShareSDK.Runtime;
+using GameFrameX.MobShareSDK.Runtime;
 using UnityEditor;
 
-namespace GameFrameX.Login.MobShareSDK.Editor
+namespace GameFrameX.MobShareSDK.Editor
 {
     [CustomEditor(typeof(MobShareSDKComponent))]
     internal sealed class MobShareSDKComponentInspector : GameFrameworkInspector
