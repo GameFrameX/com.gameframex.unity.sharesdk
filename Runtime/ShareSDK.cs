@@ -168,6 +168,7 @@ namespace cn.sharesdk.unity3d
                 return;
             }
 
+            Log.Debug($"_Callback, data: {data}");
             Hashtable res = (Hashtable)MiniJSON.jsonDecode(data);
             if (res == null || res.Count <= 0)
             {
