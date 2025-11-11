@@ -41,7 +41,7 @@ namespace GameFrameX.MobShareSDK.Runtime
     /// Share SDK 组件。
     /// </summary>
     [DisallowMultipleComponent]
-    [AddComponentMenu("Game Framework/Mob Share SDK")]
+    [AddComponentMenu("GameFrameX/Mob Share SDK")]
     [UnityEngine.Scripting.Preserve]
     [RequireComponent(typeof(cn.sharesdk.unity3d.ShareSDK))]
     [RequireComponent(typeof(cn.sharesdk.unity3d.MobSDK))]
