@@ -91,9 +91,13 @@ namespace cn.sharesdk.unity3d
                 object value = MiniJSON.parseValue(charArray, ref index, ref success);
 
                 if (success)
+                {
                     MiniJSON.lastErrorIndex = -1;
+                }
                 else
+                {
                     MiniJSON.lastErrorIndex = index;
+                }
 
                 return value;
             }
@@ -154,10 +158,14 @@ namespace cn.sharesdk.unity3d
                 int startIndex = MiniJSON.lastErrorIndex - 5;
                 int endIndex = MiniJSON.lastErrorIndex + 15;
                 if (startIndex < 0)
+                {
                     startIndex = 0;
+                }
 
                 if (endIndex >= MiniJSON.lastDecode.Length)
+                {
                     endIndex = MiniJSON.lastDecode.Length - 1;
+                }
 
                 return MiniJSON.lastDecode.Substring(startIndex, endIndex - startIndex + 1);
             }
@@ -203,13 +211,17 @@ namespace cn.sharesdk.unity3d
                     // :
                     token = nextToken(json, ref index);
                     if (token != MiniJSON.TOKEN_COLON)
+                    {
                         return null;
+                    }
 
                     // value
                     bool success = true;
                     object value = parseValue(json, ref index, ref success);
                     if (!success)
+                    {
                         return null;
+                    }
 
                     table[name] = value;
                 }
@@ -248,7 +260,9 @@ namespace cn.sharesdk.unity3d
                     bool success = true;
                     object value = parseValue(json, ref index, ref success);
                     if (!success)
+                    {
                         return null;
+                    }
 
                     array.Add(value);
                 }
@@ -302,7 +316,9 @@ namespace cn.sharesdk.unity3d
             while (!complete)
             {
                 if (index == json.Length)
+                {
                     break;
+                }
 
                 c = json[index++];
                 if (c == '"')
@@ -313,7 +329,9 @@ namespace cn.sharesdk.unity3d
                 else if (c == '\\')
                 {
                     if (index == json.Length)
+                    {
                         break;
+                    }
 
                     c = json[index++];
                     if (c == '"')
@@ -377,7 +395,9 @@ namespace cn.sharesdk.unity3d
             }
 
             if (!complete)
+            {
                 return null;
+            }
 
             return s;
         }
@@ -401,10 +421,12 @@ namespace cn.sharesdk.unity3d
         {
             int lastIndex;
             for (lastIndex = index; lastIndex < json.Length; lastIndex++)
+            {
                 if ("0123456789+-.eE".IndexOf(json[lastIndex]) == -1)
                 {
                     break;
                 }
+            }
 
             return lastIndex - 1;
         }
@@ -413,10 +435,12 @@ namespace cn.sharesdk.unity3d
         protected static void eatWhitespace(char[] json, ref int index)
         {
             for (; index < json.Length; index++)
+            {
                 if (" \t\n\r".IndexOf(json[index]) == -1)
                 {
                     break;
                 }
+            }
         }
 
 
@@ -576,7 +600,9 @@ namespace cn.sharesdk.unity3d
             foreach (var kv in dict)
             {
                 if (!first)
+                {
                     builder.Append(", ");
+                }
 
                 serializeString(kv.Key, builder);
                 builder.Append(":");

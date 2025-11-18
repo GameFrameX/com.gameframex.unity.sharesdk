@@ -63,6 +63,22 @@ namespace GameFrameX.MobShareSDK.Runtime
         [SerializeField] private string m_AppKey = string.Empty;
 
         /// <summary>
+        /// 获取 App Id。
+        /// </summary>
+        public string AppId
+        {
+            get { return m_AppId; }
+        }
+
+        /// <summary>
+        /// 获取 App Key。
+        /// </summary>
+        public string AppKey
+        {
+            get { return m_AppKey; }
+        }
+
+        /// <summary>
         /// Share SDK 组件。
         /// </summary>
         private ShareSDK shareSDK = null;
