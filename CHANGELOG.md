@@ -1,3 +1,20 @@
+# [1.1.0](https://github.com/gameframex/com.gameframex.unity.sharesdk/compare/1.0.1...1.1.0) (2025-12-23)
+
+
+### Bug Fixes
+
+* **EventArgs:** 为Data添加空值检查避免空引用异常 ([f7f18da](https://github.com/gameframex/com.gameframex.unity.sharesdk/commit/f7f18da58d19cdfee1fbd77df53f9933dba0d4d9))
+* **ShareEventArgs:** 修正EventId使用错误的类型名称 ([6954367](https://github.com/gameframex/com.gameframex.unity.sharesdk/commit/69543670e3b9a3c9330329fa83dca94f648bac1c))
+* 添加调试日志以输出回调数据 ([cfb74a2](https://github.com/gameframex/com.gameframex.unity.sharesdk/commit/cfb74a208a83366a7b9e23919f67457d909d023a))
+
+
+### Features
+
+* **ShareSDK:** 添加GetAuthInfo方法的调试日志 ([e7254b1](https://github.com/gameframex/com.gameframex.unity.sharesdk/commit/e7254b1eebb3a6a22d7e4ca5f305ac87f9c66255))
+* **ShareSDK:** 添加MobShareSDK组件及相关实现 ([49c3209](https://github.com/gameframex/com.gameframex.unity.sharesdk/commit/49c320969149530dadbbe36c0c7e7910646787a4))
+* **ShareSDK:** 添加调试模式开关功能 ([06bcc29](https://github.com/gameframex/com.gameframex.unity.sharesdk/commit/06bcc2993d72617200e691246aacf841fd1255e3))
+* 为事件处理添加调试日志输出 ([e704471](https://github.com/gameframex/com.gameframex.unity.sharesdk/commit/e704471c0daf872ca5e11ad747a8f1df0773131a))
+
 # Changelog
 
 ## [1.0.0](https://github.com/GameFrameX/com.gameframex.unity.sharesdk/tree/1.0.0) (2025-10-28)
