@@ -7,15 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <FlyVerifyCSDK/FlyVerifyCImageObserver.h>
 
 /**
  *  图片观察者
  */
-@interface MOBFImageObserver : NSObject
+@interface MOBFImageObserver : FlyVerifyCImageObserver
 
-/**
- *  图片链接
- */
-@property (nonatomic, strong, readonly) NSURL *url;
 
 @end

@@ -1,8 +1,27 @@
 fileFormatVersion: 2
-guid: 6b4b8259e669344298d3f375225b22e8
-folderAsset: yes
-DefaultImporter:
+guid: 2014db24f56ea4c5eae11fc83ec49cfa
+PluginImporter:
   externalObjects: {}
+  serializedVersion: 2
+  iconMap: {}
+  executionOrder: {}
+  defineConstraints: []
+  isPreloaded: 0
+  isOverridable: 0
+  isExplicitlyReferenced: 0
+  validateReferences: 1
+  platformData:
+  - first:
+      Any: 
+    second:
+      enabled: 0
+      settings: {}
+  - first:
+      Editor: Editor
+    second:
+      enabled: 1
+      settings:
+        DefaultValueInitialized: true
   userData: 
   assetBundleName: 
   assetBundleVariant: 

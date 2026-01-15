@@ -388,6 +388,9 @@ typedef void(^DouyinOpenSDKShareCompleteBlock)(DouyinOpenSDKShareResponse *Respo
 /// 功能特性
 @property (nonatomic, copy) DouyinOpenSDKShareFeature feature;
 
+/// 特效ID
+@property (nonatomic, copy) NSString *effectID;
+
 /**
  * @brief Send share request to Open Platform.
  *

@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/NSMutableDictionary+SSDKShare.h</key>
 		<data>
-		Iu2YtD8/V9IFjCUT+0rPTcdFcRY=
+		7DAgIQeXN7KVJHXhvSz8XGuhnMg=
 		</data>
 		<key>Headers/SSDKAuthViewManager.h</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Headers/SSDKRegister.h</key>
 		<data>
-		hZgk6QYzSNr1tFIxYLtZT3+azn4=
+		J2OXkXV7Rhqsf+keFoEYJRGm8L0=
 		</data>
 		<key>Headers/SSDKSession.h</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Headers/SSDKTypeDefine.h</key>
 		<data>
-		/ai6ohQZdPoGkj1ugAHyH38JJLQ=
+		64v6VZ5UWV0/2KX31n0aLWDTw3Y=
 		</data>
 		<key>Headers/SSDKUser.h</key>
 		<data>
@@ -70,7 +70,7 @@
 		</data>
 		<key>Headers/ShareSDK.h</key>
 		<data>
-		5U5s9ORcTBwJvPmpW00a2QYBq+c=
+		gW6sXhEy1sZLQg0QLCbLtQKV4uY=
 		</data>
 		<key>Headers/ShareSDKHeader.h</key>
 		<data>
@@ -82,7 +82,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		6Rmhb1FhfSX6OsPh06GcD0CWfGU=
+		a+l407A8/qaRiQiOaIn8pxyKdKw=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -114,7 +114,7 @@
 		</data>
 		<key>PrivateHeaders/SSDKConst.h</key>
 		<data>
-		5k3yND68winFMt40+FMWMoyj66U=
+		gcBrB+pX5KcnujiCDyh5eItYCqo=
 		</data>
 		<key>PrivateHeaders/SSDKContext.h</key>
 		<data>
@@ -126,7 +126,7 @@
 		</data>
 		<key>PrivateHeaders/SSDKError.h</key>
 		<data>
-		XmgyM2dI62RwOh7scXSRDgb61y4=
+		7VaayXGO32gQWadRDPn5O+dfZmA=
 		</data>
 		<key>PrivateHeaders/SSDKHelper.h</key>
 		<data>
@@ -142,7 +142,7 @@
 		</data>
 		<key>PrivateHeaders/SSDKLogManager.h</key>
 		<data>
-		EJNdEjHW9C8/6uduYxxgkLObuKY=
+		XHd2hz9luw4uR9Er9iVqJMgRhDg=
 		</data>
 		<key>PrivateHeaders/SSDKNavigationController.h</key>
 		<data>
@@ -178,11 +178,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Iu2YtD8/V9IFjCUT+0rPTcdFcRY=
+			7DAgIQeXN7KVJHXhvSz8XGuhnMg=
 			</data>
 			<key>hash2</key>
 			<data>
-			vegHtUwE7e/DTW8UeKFz73bb81Mgozer9OKAW179kCc=
+			zhpWbsoDjN6jVqEo8dJ9+pJc8DGK4/cnCaRgumepCJg=
 			</data>
 		</dict>
 		<key>Headers/SSDKAuthViewManager.h</key>
@@ -255,11 +255,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			hZgk6QYzSNr1tFIxYLtZT3+azn4=
+			J2OXkXV7Rhqsf+keFoEYJRGm8L0=
 			</data>
 			<key>hash2</key>
 			<data>
-			gFXCFs1iI7kf5j2eMIxHFxs+OwNi0oLcwt1LW72Sb/Y=
+			SmM6/PbrRTET0ptG+HmdjuDfZ/BIlsQuoWTXvySVMyM=
 			</data>
 		</dict>
 		<key>Headers/SSDKSession.h</key>
@@ -299,11 +299,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			/ai6ohQZdPoGkj1ugAHyH38JJLQ=
+			64v6VZ5UWV0/2KX31n0aLWDTw3Y=
 			</data>
 			<key>hash2</key>
 			<data>
-			4IvIMPZg/55R5/dfPbtsSFZ0u+kV9VQg3un54pKZ8I4=
+			PWmk/mLW0NLgexEeRY6ftYnxAzdS/Yt80j9l4t8mXC8=
 			</data>
 		</dict>
 		<key>Headers/SSDKUser.h</key>
@@ -343,11 +343,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			5U5s9ORcTBwJvPmpW00a2QYBq+c=
+			gW6sXhEy1sZLQg0QLCbLtQKV4uY=
 			</data>
 			<key>hash2</key>
 			<data>
-			0YOI9uImiP29vyaw0K+BoD6fmsDGeS3P+ZlzutTTmiE=
+			zbxNUvEbZn/Eo1mjd0ThUFDBxskB/Zri9d9PNEQEaxM=
 			</data>
 		</dict>
 		<key>Headers/ShareSDKHeader.h</key>
@@ -453,11 +453,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			5k3yND68winFMt40+FMWMoyj66U=
+			gcBrB+pX5KcnujiCDyh5eItYCqo=
 			</data>
 			<key>hash2</key>
 			<data>
-			qdq2gB+Yk3K6gBHhvDhxB8uct9viHlIs/AxeMCzk+xY=
+			Znqhr5noXAD3hNaw4AwSPr7+DBnRMdNPasoWWqBlyEc=
 			</data>
 		</dict>
 		<key>PrivateHeaders/SSDKContext.h</key>
@@ -486,11 +486,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			XmgyM2dI62RwOh7scXSRDgb61y4=
+			7VaayXGO32gQWadRDPn5O+dfZmA=
 			</data>
 			<key>hash2</key>
 			<data>
-			ZbxveTjboG9B3UKSBazEBgtzBOTiZl6f7rFcAhMwjos=
+			Detsg9ecT2wO3jDCnMubD6XXuu0AXgHAOkcIRFpIZsc=
 			</data>
 		</dict>
 		<key>PrivateHeaders/SSDKHelper.h</key>
@@ -530,11 +530,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			EJNdEjHW9C8/6uduYxxgkLObuKY=
+			XHd2hz9luw4uR9Er9iVqJMgRhDg=
 			</data>
 			<key>hash2</key>
 			<data>
-			DNMV+4+xtc7+xWHP5m1DJss5uZ2UPNY9qEVu5/pk5KI=
+			Y+2KrAYT/h7uGQY8lGjXtV12AwA/l0A4AcSeOfNHXiU=
 			</data>
 		</dict>
 		<key>PrivateHeaders/SSDKNavigationController.h</key>

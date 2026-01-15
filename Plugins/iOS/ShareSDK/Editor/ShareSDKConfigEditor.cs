@@ -111,9 +111,9 @@ namespace cn.sharesdk.unity3d
         {
             try
             {
-                var files = System.IO.Directory.GetFiles(Application.dataPath, "MOB.keypds", System.IO.SearchOption.AllDirectories);
-                string filePath = files[0];
-                FileInfo projectFileInfo = new FileInfo(filePath);
+                DirectoryInfo directory = new DirectoryInfo(Application.dataPath);
+                var files = directory.Parent.Parent.GetFiles("MOB.keypds", SearchOption.AllDirectories);
+                FileInfo projectFileInfo = files[0];
                 if (projectFileInfo.Exists)
                 {
                     StreamReader sReader = projectFileInfo.OpenText();
@@ -149,8 +149,10 @@ namespace cn.sharesdk.unity3d
         {
             try
             {
-                var files = System.IO.Directory.GetFiles(Application.dataPath, "MOB.keypds", System.IO.SearchOption.AllDirectories);
-                string filePath = files[0];
+                DirectoryInfo directory = new DirectoryInfo(Application.dataPath);
+                var files = directory.Parent.Parent.GetFiles("MOB.keypds", SearchOption.AllDirectories);
+                FileInfo projectFileInfo = files[0];
+                string filePath = projectFileInfo.FullName;
                 if (File.Exists(filePath))
                 {
                     Hashtable datastore = new Hashtable();
@@ -248,9 +250,9 @@ namespace cn.sharesdk.unity3d
                 }
             }
 
-            var files = System.IO.Directory.GetFiles(Application.dataPath, "ShareSDK.mobpds", System.IO.SearchOption.AllDirectories);
-            string filePath = files[0];
-            FileInfo projectFileInfo = new FileInfo(filePath);
+            DirectoryInfo directory = new DirectoryInfo(Application.dataPath);
+            var files = directory.Parent.Parent.GetFiles("ShareSDK.mobpds", SearchOption.AllDirectories);
+            FileInfo projectFileInfo = files[0];
             if (projectFileInfo.Exists)
             {
                 StreamReader sReader = projectFileInfo.OpenText();
@@ -291,7 +293,7 @@ namespace cn.sharesdk.unity3d
 
 
                 var json = MiniJSON.jsonEncode(datastore);
-                StreamWriter sWriter = new StreamWriter(filePath);
+                StreamWriter sWriter = new StreamWriter(projectFileInfo.FullName);
                 sWriter.WriteLine(json);
                 sWriter.Close();
                 sWriter.Dispose();
@@ -356,9 +358,9 @@ namespace cn.sharesdk.unity3d
                 }
             }
 
-            var files = System.IO.Directory.GetFiles(Application.dataPath, "ShareSDK.mobpds", System.IO.SearchOption.AllDirectories);
-            string filePath = files[0];
-            FileInfo projectFileInfo = new FileInfo(filePath);
+            DirectoryInfo directory = new DirectoryInfo(Application.dataPath);
+            var files = directory.Parent.Parent.GetFiles("ShareSDK.mobpds", SearchOption.AllDirectories);
+            FileInfo projectFileInfo = files[0];
             if (projectFileInfo.Exists)
             {
                 StreamReader sReader = projectFileInfo.OpenText();
@@ -376,7 +378,7 @@ namespace cn.sharesdk.unity3d
                 }
 
                 var json = MiniJSON.jsonEncode(datastore);
-                StreamWriter sWriter = new StreamWriter(filePath);
+                StreamWriter sWriter = new StreamWriter(projectFileInfo.FullName);
                 sWriter.WriteLine(json);
                 sWriter.Close();
                 sWriter.Dispose();

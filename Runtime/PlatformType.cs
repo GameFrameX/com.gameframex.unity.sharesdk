@@ -115,6 +115,8 @@ namespace cn.sharesdk.unity3d
         Apple = 61,            //苹果登录
         SnapChat = 66,         //Snapchat
 		WatermelonVideo = 69,   //西瓜视频
+		Threads = 72,			//Threads
+		Lark = 74,			//Threads
 		YixinPlatform = 994,    //Yixin series
 		KakaoPlatform = 995,    //Kakao series
 		EvernoteInternational = 996,//Evernote InternationaL Edition

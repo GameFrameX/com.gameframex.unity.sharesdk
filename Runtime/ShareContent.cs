@@ -674,16 +674,33 @@ namespace cn.sharesdk.unity3d
             shareParams["lc_create_at"] = createtime;
         }
 
-        public void SetSinaCardURLAndroid(string url)
-        {
-            shareParams["lc_url"] = url;
-        }
+		public void SetSinaCardURLAndroid(string url) {
+			shareParams["lc_url"] = url;
+		}
 
-        public void SetDisableNewTask(bool disableNewTask)
-        {
-            shareParams["disableNewTask"] = disableNewTask;
-        }
+		public void SetDisableNewTask(bool disableNewTask) {
+			shareParams["disableNewTask"] =  disableNewTask;
+		}
 
+		public void SetStringParam(string key, string val)
+		{
+			shareParams[key] = val;
+		}
+
+		public void SetIntegerParam(string key, int val)
+		{
+			shareParams[key] = val;
+		}
+
+		public void SetBooleanParam(string key, bool val)
+		{
+			shareParams[key] = val;
+		}
+
+		public void SetStringArrayParam(string key, string[] val)
+		{
+			shareParams[key] = String.Join(",",val);
+		}
         /// <summary>
         /// 抖音视频9.0及其以上版本系统需要传的activity
         /// <summary>

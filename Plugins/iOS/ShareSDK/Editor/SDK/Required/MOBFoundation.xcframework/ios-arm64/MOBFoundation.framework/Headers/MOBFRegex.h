@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <FlyVerifyCSDK/FlyVerifyCRegex.h>
 
 /**
  *  替换处理
@@ -47,45 +48,6 @@ typedef NS_ENUM(NSUInteger, MOBFRegexOptions)
 /**
  *  正则表达式工具类
  */
-@interface MOBFRegex : NSObject
-
-/**
- *  替换字符串
- *
- *  @param regex    正则表达式
- *  @param string   原始字符串
- *  @param block    块回调处理替换规则
- *
- *  @return 字符串
- */
-+ (NSString *)stringByReplacingOccurrencesOfRegex:(NSString *)regex
-                                       withString:(NSString *)string
-                                       usingBlock:(MOBFReplacingOccurrencesHandler)block;
-
-/**
- *  匹配字符串
- *
- *  @param regex    正则表达式
- *  @param options  表达式选项
- *  @param range    匹配范围
- *  @param string   原始字符串
- *
- *  @return YES 匹配，NO 不匹配
- */
-+ (BOOL)isMatchedByRegex:(NSString *)regex
-                 options:(MOBFRegexOptions)options
-                 inRange:(NSRange)range
-              withString:(NSString *)string;
-
-/**
- *  匹配字符串
- *
- *  @param regex 正则表达式
- *  @param string   原始字符串
- *
- *  @return 匹配的字符串集合
- */
-+ (NSArray *)captureComponentsMatchedByRegex:(NSString *)regex
-                                  withString:(NSString *)string;
+@interface MOBFRegex : FlyVerifyCRegex
 
 @end

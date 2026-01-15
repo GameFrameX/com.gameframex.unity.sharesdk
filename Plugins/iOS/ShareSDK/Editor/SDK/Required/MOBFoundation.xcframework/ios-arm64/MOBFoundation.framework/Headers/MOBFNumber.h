@@ -7,19 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <FlyVerifyCSDK/FlyVerifyCNumber.h>
 
 /**
  *  数值工具类
  */
-@interface MOBFNumber : NSObject
+@interface MOBFNumber : FlyVerifyCNumber
 
-/**
- *  获取随机整型值
- *
- *  @param max 最大随机数
- *
- *  @return 随机整数
- */
-+ (NSInteger)randomInteger:(NSInteger)max;
 
 @end

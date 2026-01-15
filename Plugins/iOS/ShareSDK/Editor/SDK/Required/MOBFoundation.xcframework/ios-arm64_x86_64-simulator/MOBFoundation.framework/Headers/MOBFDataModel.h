@@ -7,12 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <MOBFoundation/IMOBFDataModel.h>
+#import <FlyVerifyCSDK/FlyVerifyCDataModel.h>
 
 /**
  数据模型
  */
-@interface MOBFDataModel : NSObject <IMOBFDataModel,
-                                     NSCoding>
-
+@interface MOBFDataModel : FlyVerifyCDataModel
 @end

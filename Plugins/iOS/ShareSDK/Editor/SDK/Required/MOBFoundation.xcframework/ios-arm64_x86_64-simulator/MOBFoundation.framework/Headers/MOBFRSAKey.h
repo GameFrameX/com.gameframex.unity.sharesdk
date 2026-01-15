@@ -7,29 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <FlyVerifyCSDK/FlyVerifyCRSAKey.h>
 
-@class MOBFBigInteger;
 
-@interface MOBFRSAKey : NSObject
+@interface MOBFRSAKey : FlyVerifyCRSAKey
 
-/**
- *  bits in key
- */
-@property (nonatomic) int bits;
-
-/**
- *  modulus
- */
-@property (nonatomic, strong) MOBFBigInteger *n;
-
-/**
- *  public exponent
- */
-@property (nonatomic, strong) MOBFBigInteger *e;
-
-/**
- *  private exponent
- */
-@property (nonatomic, strong) MOBFBigInteger *d;
 
 @end

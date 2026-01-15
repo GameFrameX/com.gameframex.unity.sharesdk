@@ -16,6 +16,8 @@
 #import "DouyinOpenSDKConstants.h"
 #import "DouyinOpenSDKErrorCode.h"
 #import "DouyinOpenSDKObjects.h"
+#import "DYOpenSDKTrackerManager.h"
+#import "DYOpenTrackerUploadService.h"
 #import "DouyinOpenSDKShare.h"
 
 FOUNDATION_EXPORT double DouyinOpenSDKVersionNumber;

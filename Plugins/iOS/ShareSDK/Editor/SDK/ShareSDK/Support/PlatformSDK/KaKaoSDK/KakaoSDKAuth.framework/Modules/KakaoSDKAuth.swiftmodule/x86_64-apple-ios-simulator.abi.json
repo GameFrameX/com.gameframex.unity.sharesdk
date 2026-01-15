@@ -1522,6 +1522,13 @@
             "printedName": "RequestRetrier",
             "usr": "s:9Alamofire14RequestRetrierP",
             "mangledName": "$s9Alamofire14RequestRetrierP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
           }
         ]
       },
@@ -1685,6 +1692,13 @@
             "printedName": "RequestRetrier",
             "usr": "s:9Alamofire14RequestRetrierP",
             "mangledName": "$s9Alamofire14RequestRetrierP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
           }
         ]
       },

@@ -130,6 +130,18 @@
 - (void)setupInstagramWithClientId:(NSString *)clientId
                       clientSecret:(NSString *)clientSecret
                        redirectUrl:(NSString *)redirectUrl;
+
+/**
+ 设置Threads应用信息
+ 
+ @param clientId 应用标识
+ @param clientSecret 应用密钥
+ @param redirectUrl 回调地址
+ */
+- (void)setupThreadsWithClientId:(NSString *)clientId
+                    clientSecret:(NSString *)clientSecret
+                     redirectUrl:(NSString *)redirectUrl;
+
 /**
 设置Instagram应用信息
 
@@ -385,4 +397,14 @@
  */
 - (void)setupXHSWithAppId:(NSString *)appId
             universalLink:(NSString *)universalLink;
+
+/**
+ 设置飞书/Lark应用信息
+ 
+ @param appId 应用标识
+ @param appSecret 应用密钥
+ */
+- (void)setupLarkWithAppId:(NSString *)appId
+                 appSecret:(NSString *)appSecret;
+
 @end

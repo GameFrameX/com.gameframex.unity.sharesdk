@@ -11,10 +11,12 @@
 @class DouyinOpenSDKBaseResponse;
 
 typedef NS_ENUM(NSInteger, DouyinOpenSDKTargetAppType) {
-    DouyinOpenSDKTargetAuto,
-    DouyinOpenSDKTargetDouyinLiteApp,
-    DouyinOpenSDKTargetDouyinApp,
-    DouyinOpenSDKTargetDouyinHTSApp,
+    DouyinOpenSDKTargetAuto,            // 按照默认优先顺序依次尝试打开应用
+    DouyinOpenSDKTargetDouyinLiteApp,   // 只尝试拉起抖音极速版
+    DouyinOpenSDKTargetDouyinApp,       // 只尝试拉起抖音
+    DouyinOpenSDKTargetDouyinHTSApp,    // 只尝试拉起抖音火山版
+    DouyinOpenSDKTargetDouyinSearchApp, // 只尝试拉起抖音搜索版
+    DouyinOpenSDKTargetDouyinSelectApp, // 只尝试拉起抖音精选版
 };
 
 // extraInfo 里的 key，字符串枚举

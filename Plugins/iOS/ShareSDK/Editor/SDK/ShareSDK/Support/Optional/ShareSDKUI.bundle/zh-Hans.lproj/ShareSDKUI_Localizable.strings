@@ -60,7 +60,9 @@
 "ShareType_60" = "企业微信";
 "ShareType_61" = "Apple";
 "ShareType_70" = "TikTok";
-
+"ShareType_72" = "Threads";
+"ShareType_74" = "飞书";
+"ShareType_76" = "WA Business";
 "ShareType_64" = "绿洲";
 "ShareType_66" = "SnapChat";
 "ShareType_67" = "小红书";

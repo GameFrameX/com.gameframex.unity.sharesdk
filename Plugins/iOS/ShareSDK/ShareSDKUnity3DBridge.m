@@ -285,6 +285,58 @@ extern "C" {
         }
     }
     
+    void __setXHSParams(NSDictionary *value,NSMutableDictionary *params,SSDKPlatformType subType)
+    {
+        NSString *title = nil;
+        NSString *desc = nil;
+        NSMutableArray *videos = [NSMutableArray array];
+        NSMutableArray *images = [NSMutableArray array];
+        SSDKContentType type = SSDKContentTypeText;
+        
+        if ([[value objectForKey:@"title"] isKindOfClass:[NSString class]])
+        {
+            title = [value objectForKey:@"title"];
+        }
+        
+        if ([[value objectForKey:@"desc"] isKindOfClass:[NSString class]])
+        {
+            desc = [value objectForKey:@"desc"];
+        }
+        
+        if ([[value objectForKey:@"imageArray"] isKindOfClass:[NSString class]])
+        {
+            NSString *imagesStr = [value objectForKey:@"imageArray"];
+            images = [imagesStr componentsSeparatedByString:@","].mutableCopy;
+        }
+        
+        if ([[value objectForKey:@"imageUrl"] isKindOfClass:[NSString class]])
+        {
+            NSString *image = [value objectForKey:@"imageUrl"];
+            if (image)
+            {
+                [images addObject:image];
+            }
+        }
+        if ([[value objectForKey:@"videoPath"] isKindOfClass:[NSString class]])
+        {
+            NSString *video = [value objectForKey:@"videoPath"];
+            if (video) {
+                NSDictionary *dict = @{@"videoObj": [video copy]};
+                [videos addObject:dict];
+            }
+        }
+        if ([[value objectForKey:@"shareType"] isKindOfClass:[NSNumber class]])
+        {
+            type = __convertContentType([[value objectForKey:@"shareType"] integerValue]);
+        }
+        
+        [params SSDKSetupXHSShareParamsByTitle:title
+                                          desc:desc
+                                         image:images
+                                         video:videos
+                                          type:type];
+    }
+    
     void __setWechatParams(NSDictionary *value,NSMutableDictionary *params,SSDKPlatformType subType)
     {
         NSString *text = nil;
@@ -1033,6 +1085,12 @@ extern "C" {
                 if ([value isKindOfClass:[NSDictionary class]])
                 {
                     __setQQParams(value,params,SSDKPlatformSubTypeQZone);
+                }
+                
+                //小红书
+                value = [MOBFJson objectFromJSONString:[customizeShareParams objectForKey:[NSString stringWithFormat:@"%lu",(unsigned long)SSDKPlatformTypeXHS]]];
+                if ([value isKindOfClass:[NSDictionary class]]) {
+                    __setXHSParams(value, params, SSDKPlatformTypeXHS);
                 }
                 
                 //微信系列
@@ -3253,6 +3311,12 @@ extern "C" {
                 else if(type == SSDKPlatformTypeTumblr){
                     [platformsRegister setupTumblrByConsumerKey:platformInfo[@"consumer_key"] consumerSecret:platformInfo[@"consumer_secret"] redirectUrl:platformInfo[@"callback_url"]];
                 }
+                else if(type == SSDKPlatformTypeXHS){
+                    [platformsRegister setupXHSWithAppId:platformInfo[@"AppId"] universalLink:platformInfo[@"UniversalLink"]];
+                }
+                else if(type == SSDKPlatformTypeThreads){
+                    [platformsRegister setupThreadsWithClientId:platformInfo[@"AppId"] clientSecret:platformInfo[@"AppSecret"] redirectUrl:platformInfo[@"RedirectUrl"]];
+                }
 //                else if(type == SSDKPlatformTypeYouTube){
 //                    [platformsRegister setupYouTubeWithClientId:platformInfo[@"client_id"] clientSecret:platformInfo[@"client_secret"] redirectUrl:platformInfo[@"redirect_uri"]];
 //                }
@@ -3426,7 +3490,6 @@ extern "C" {
         [ShareSDK share:platType
              parameters:shareParams
          onStateChanged:^(SSDKResponseState state, NSDictionary *userData, SSDKContentEntity *contentEntity, NSError *error) {
-             
              NSMutableDictionary *resultDict = [NSMutableDictionary dictionary];
              [resultDict setObject:[NSNumber numberWithInteger:9] forKey:@"action"];
              [resultDict setObject:[NSNumber numberWithInteger:state] forKey:@"status"];
@@ -3481,6 +3544,8 @@ extern "C" {
 
     void __iosShareSDKShareWithActivity (int reqID, int platType, void *content, void *observer)
     {
+        return __iosShareSDKShare(reqID, platType, content, observer);
+        
         NSString *observerStr = nil;
         NSMutableDictionary *shareParams = [NSMutableDictionary dictionary];
         observerStr = [NSString stringWithCString:observer encoding:NSUTF8StringEncoding];

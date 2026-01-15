@@ -49,6 +49,9 @@ namespace cn.sharesdk.unity3d
 		public EvernoteInternational evernoteInternational;
 		public Apple apple;
 		public WatermelonVideo watermelonVideo;
+		public XHSDevInfo xhs;
+		public ThreadsDevInfo threads;
+		public Lark lark;
 #endif
 
 #if UNITY_ANDROID
@@ -111,9 +114,28 @@ namespace cn.sharesdk.unity3d
         public bool Enable = true;
     }
 
-    [Serializable]
-    public class SinaWeiboDevInfo : DevInfo
-    {
+		[Serializable]
+	public class ThreadsDevInfo : DevInfo {
+#if UNITY_IPHONE || UNITY_IOS
+		public int type = (int)PlatformType.Threads;
+		public string AppId = "620231433749264";
+		public string AppSecret = "77b0b941d917823dd3e26f150d9cef66";
+		public string RedirectUrl = "https://www.mob.com/";
+#endif
+	}
+
+	[Serializable]
+	public class XHSDevInfo : DevInfo {
+#if UNITY_IPHONE || UNITY_IOS
+		public int type = (int)PlatformType.Littleredbook;
+		public string AppId = "7bf2d19af55b56259a4c6984ecf9445c";
+		public string UniversalLink = "https://70imc.share2dlink.com/";
+#endif
+	}
+
+	[Serializable]
+	public class SinaWeiboDevInfo : DevInfo {
+
 #if UNITY_IPHONE || UNITY_IOS
 		public int type = (int)PlatformType.SinaWeibo;
 		public string app_key = "1556465402";
@@ -1088,9 +1110,20 @@ namespace cn.sharesdk.unity3d
 #endif
     }
 
-    [Serializable]
-    public class Apple : DevInfo
-    {
+	[Serializable]
+	public class Lark : DevInfo {
+
+#if UNITY_IPHONE || UNITY_IOS
+		public int type = (int)PlatformType.Lark;
+		public string app_id = "cli_a896950e30d49013";
+		public string app_secret = "9lVzx8oMLJyki3TTXunsic6JXVFU3m7c";
+#endif
+
+	}
+
+	[Serializable]
+	public class Apple : DevInfo {
+
 #if UNITY_IPHONE || UNITY_IOS
 		public const int type = (int)PlatformType.Apple;
 #endif

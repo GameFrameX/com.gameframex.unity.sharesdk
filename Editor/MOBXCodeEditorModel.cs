@@ -90,11 +90,11 @@ namespace cn.mob.unity3d.sdkporter
         //for shareSDK
         private void SetPlatformConfList()
         {
-            string[] files = Directory.GetFiles(Application.dataPath, "All.pltpds", SearchOption.AllDirectories);
+            DirectoryInfo directory = new DirectoryInfo(Application.dataPath);
+            var files = directory.Parent.Parent.GetFiles("All.pltpds", SearchOption.AllDirectories);
             if (files.Length > 0)
             {
-                string filePath = files[0];
-                FileInfo fileInfo = new FileInfo(filePath);
+                var fileInfo = files[0];
                 if (fileInfo.Exists)
                 {
                     StreamReader sReader = fileInfo.OpenText();
@@ -112,11 +112,12 @@ namespace cn.mob.unity3d.sdkporter
 
         public void LoadMobpds()
         {
-            string[] files = Directory.GetFiles(Application.dataPath, "*.mobpds", SearchOption.AllDirectories);
-            foreach (string filePath in files)
+            DirectoryInfo directory = new DirectoryInfo(Application.dataPath);
+            var files = directory.Parent.Parent.GetFiles("*.mobpds", SearchOption.AllDirectories);
+            foreach (var filePath in files)
             {
                 //读取配置
-                ReadMobpds(filePath);
+                ReadMobpds(filePath.FullName);
             }
         }
 
@@ -254,7 +255,8 @@ namespace cn.mob.unity3d.sdkporter
                     string fileName = (string)platformConfList[key];
                     platformJsList.Add(fileName + ".js");
 
-                    var files = System.IO.Directory.GetFiles(Application.dataPath, fileName + ".pltpds", System.IO.SearchOption.AllDirectories);
+                    DirectoryInfo directory = new DirectoryInfo(Application.dataPath);
+                    var files = directory.Parent.Parent.GetFiles(fileName + ".pltpds", SearchOption.AllDirectories);
 
                     if (fileName.Equals("Apple"))
                     {
@@ -263,13 +265,13 @@ namespace cn.mob.unity3d.sdkporter
 
                     if (files.Length > 0)
                     {
-                        string filePath = files[0];
+                        var filePath = files[0];
 
                         string appkey = (string)platforms[key];
 
                         Hashtable deviceInfo = (Hashtable)dataSource["ShareSDKDeviceInfo"];
                         //读取配置
-                        ReadMobpds(filePath, appkey, savefilePath, (Hashtable)deviceInfo[key]);
+                        ReadMobpds(filePath.FullName, appkey, savefilePath, (Hashtable)deviceInfo[key]);
                     }
                 }
             }
@@ -493,11 +495,12 @@ namespace cn.mob.unity3d.sdkporter
                 {
                     isOpenRestoreScene = true;
 
-                    var files = System.IO.Directory.GetFiles(Application.dataPath, "restoreScene.rspds", System.IO.SearchOption.AllDirectories);
+                    DirectoryInfo directory = new DirectoryInfo(Application.dataPath);
+                    var files = directory.Parent.Parent.GetFiles("restoreScene.rspds", SearchOption.AllDirectories);
 
                     if (files.Length > 0)
                     {
-                        string filePath = files[0];
+                        string filePath = files[0].FullName;
 
                         string appkey = MobAppKey;
                         //读取配置

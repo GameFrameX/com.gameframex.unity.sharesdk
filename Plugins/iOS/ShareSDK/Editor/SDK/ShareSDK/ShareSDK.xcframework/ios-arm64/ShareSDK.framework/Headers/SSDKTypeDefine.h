@@ -218,6 +218,18 @@ typedef NS_ENUM(NSUInteger, SSDKPlatformType){
      */
     SSDKPlatformTypeWatermelonVideo       = 69,
     /**
+     * Threads
+     */
+    SSDKPlatformTypeThreads             = 72,
+    /**
+     * Lark
+     */
+    SSDKPlatformTypeLark                = 74,
+    /**
+     *  WhatsAppSMB
+     */
+    SSDKPlatformTypeWhatsAppSMB         = 76,
+    /**
      *  易信
      */
     SSDKPlatformTypeYiXin               = 994,
@@ -423,41 +435,50 @@ typedef NS_ENUM(NSUInteger, SSDKPrivacyStatus){
 
 typedef NS_ENUM(NSUInteger, SSDKFacebookShareType){
     /**
-     * 进入facebook分享
+     * 自动采用最合适的模式
      */
-    SSDKFacebookShareTypeNative = 1,
+    SSDKFacebookShareTypeAuto = 0,
     /**
-      在app内分享
+     * 进入facebook app分享
+     */
+    SSDKFacebookShareTypeNative NS_ENUM_DEPRECATED_IOS(2_0, 7_0, "Deprecated"),
+    /**
+     在app内分享
      */
     SSDKFacebookShareTypeShareSheet,
     /**
-       Safari分享
-    */
+     Safari分享
+     */
     SSDKFacebookShareTypeBrowser,
     /**
-       WKWebView分享
-    */
+     WKWebView分享
+     */
     SSDKFacebookShareTypeWeb,
     /**
-       Safari提示对话框
-    */
+     Safari提示对话框
+     */
     SSDKFacebookShareTypeFeedBrowser,
     /**
-        WKWebView提示对话框
-    */
+     WKWebView提示对话框
+     */
     SSDKFacebookShareTypeFeedWeb
+};
+
+typedef NS_ENUM(NSUInteger, SSDKLarkServerType) {
+    SSDKLarkServerFeiShu,
+    SSDKLarkServerLark
 };
 
 typedef NS_ENUM(NSUInteger, SSDKFBSDKProfilePictureMode)
 {
-  /**
-    A square cropped version of the image will be included in the view.
-   */
-  SSDKFBSDKProfilePictureModeSquare,
-  /**
-    The original picture's aspect ratio will be used for the source image in the view.
-   */
-  SSDKFBSDKProfilePictureModeNormal,
+    /**
+     A square cropped version of the image will be included in the view.
+     */
+    SSDKFBSDKProfilePictureModeSquare,
+    /**
+     The original picture's aspect ratio will be used for the source image in the view.
+     */
+    SSDKFBSDKProfilePictureModeNormal,
 };
 
 typedef NS_ENUM(NSUInteger, SSDKDouYinShareActionMode)
@@ -480,7 +501,9 @@ typedef NS_ENUM(NSUInteger, SSDKDouyinLandedPageType)
  *  @param user       授权用户信息，当且仅当state为SSDKResponseStateSuccess时返回
  *  @param error      错误信息，当且仅当state为SSDKResponseStateFail时返回
  */
-typedef void(^SSDKAuthorizeStateChangedHandler) (SSDKResponseState state, SSDKUser *user, NSError *error);
+typedef void(^SSDKAuthorizeStateChangedHandler) (SSDKResponseState state,
+                                                 SSDKUser *user,
+                                                 NSError *error);
 
 /**
  *  获取用户状态变更回调处理器
@@ -489,7 +512,9 @@ typedef void(^SSDKAuthorizeStateChangedHandler) (SSDKResponseState state, SSDKUs
  *  @param user  用户信息，当且仅当state为SSDKResponseStateSuccess时返回
  *  @param error 错误信息，当且仅当state为SSDKResponseStateFail时返回
  */
-typedef void(^SSDKGetUserStateChangedHandler) (SSDKResponseState state, SSDKUser *user, NSError *error);
+typedef void(^SSDKGetUserStateChangedHandler) (SSDKResponseState state,
+                                               SSDKUser *user,
+                                               NSError *error);
 
 
 /**
@@ -501,7 +526,10 @@ typedef void(^SSDKGetUserStateChangedHandler) (SSDKResponseState state, SSDKUser
  *  @param contentEntity    分享内容实体,当且仅当state为SSDKResponseStateSuccess时返回
  *  @param error            错误信息,当且仅当state为SSDKResponseStateFail时返回
  */
-typedef void(^SSDKShareStateChangedHandler) (SSDKResponseState state, NSDictionary *userData, SSDKContentEntity *contentEntity,  NSError *error);
+typedef void(^SSDKShareStateChangedHandler) (SSDKResponseState state,
+                                             NSDictionary *userData,
+                                             SSDKContentEntity *contentEntity,
+                                             NSError *error);
 
 /**
  * 当前分享处理的

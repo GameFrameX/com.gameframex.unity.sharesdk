@@ -1,0 +1,17 @@
+{
+    "folders": [
+        "/SDK/ShareSDK/Support/PlatformSDK/LarkSDK"
+    ],
+    "framework": [
+        "/SDK/ShareSDK/Support/PlatformConnector/LarkConnector.xcframework"
+    ],
+    "LSApplicationQueriesSchemes": [
+        "lark"
+    ],
+    "URLSchemes": {
+        "CFBundleURLSchemes": [
+            "{appkey}"
+        ],
+        "CFBundleURLName": "lark"
+    }
+}

@@ -14,31 +14,31 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		vBKFys+2j9yaoQ7ETjy1Rh7qAzU=
+		TSYaAdre004vQ4WQwQT54x301fs=
 		</data>
 		<key>Modules/Alamofire.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		vEM4kZXok5387D9MSf82ou2quXk=
+		1DVYiSDz43zYhVDLHgiufDF/R+Q=
 		</data>
 		<key>Modules/Alamofire.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		XOSYToNVHt80N6l5CEgdoCh8WwU=
+		HS7wCqWzKwWcLexsVUw5hCoSHIw=
 		</data>
 		<key>Modules/Alamofire.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		jNV3ZKml0wO/HCO6admppVVEhJA=
+		lUAylPgwipuHUjW4aDN7ks5s+lA=
 		</data>
 		<key>Modules/Alamofire.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		1ccPRNRPuF+zFl9K6wz55rzvphQ=
+		95edYQgrX817tCFkv8EAoX+tFh4=
 		</data>
 		<key>Modules/Alamofire.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		hcK4JdtP6wI0mzEcX2wnwL3+krA=
+		Uvi3ZRqGPwyON3eroP4L9/EjAdc=
 		</data>
 		<key>Modules/Alamofire.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		k+QTUAZjYLtmlirKI5iJ3pxjWBI=
+		hi2cQEOilVQj8mX+bkhXx3iBBQY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -53,6 +53,10 @@
 	<dict>
 		<key>Headers/Alamofire-Swift.h</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			HM1dYfXSW3bE8ppaYT+C60N2X40=
+			</data>
 			<key>hash2</key>
 			<data>
 			mKs4vHAhUQ/2dxMkyxpFvGojoLmuvB/+2autqL+7g4Q=
@@ -60,6 +64,10 @@
 		</dict>
 		<key>Headers/Alamofire-umbrella.h</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			mHfdAFXADntqiLfvjq4XWpdZQHk=
+			</data>
 			<key>hash2</key>
 			<data>
 			xjVegAu7WgIX6x6hDM6tQd3ZedQH8S5veIqpM/WycHg=
@@ -67,48 +75,76 @@
 		</dict>
 		<key>Modules/Alamofire.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			1DVYiSDz43zYhVDLHgiufDF/R+Q=
+			</data>
 			<key>hash2</key>
 			<data>
-			Xm3UfLIYtDnfj7GhVaU3r6iVSAkDvccVUoUbqBip6pg=
+			Ps2vlmDdz+2T624hJMolQ99ui9I6mwSkAKL4rFQ8HDE=
 			</data>
 		</dict>
 		<key>Modules/Alamofire.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			HS7wCqWzKwWcLexsVUw5hCoSHIw=
+			</data>
 			<key>hash2</key>
 			<data>
-			rUtrPFnkWNFGd/A6hv8KDhjG49DGIgVXfO0QYmej0dI=
+			NnehLaxXd97b4MF4juLxu5UySzwy89carH0Srw4X7uA=
 			</data>
 		</dict>
 		<key>Modules/Alamofire.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			lUAylPgwipuHUjW4aDN7ks5s+lA=
+			</data>
 			<key>hash2</key>
 			<data>
-			hlqd9px392t67S3wX0d3Nw2JcOerZlC5Qb6cv4fhPgU=
+			yGujysl+/xuBSsmWLCYMo/qVKUXR70jiRBsXTv5naew=
 			</data>
 		</dict>
 		<key>Modules/Alamofire.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			95edYQgrX817tCFkv8EAoX+tFh4=
+			</data>
 			<key>hash2</key>
 			<data>
-			2h6K/LvNBDwA91lUxR6awDwlZIHehvQwh6eNeBCF17Q=
+			mIi45wFA6xmRCTUbj6Ywi1aFBZmVJmHXV9ikuT+h4fQ=
 			</data>
 		</dict>
 		<key>Modules/Alamofire.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			Uvi3ZRqGPwyON3eroP4L9/EjAdc=
+			</data>
 			<key>hash2</key>
 			<data>
-			WZbjBIB6pEY+xtjOMhUyEkdSb0/6bPff4/Rxef5w4zM=
+			hi1rqME6d/D3ZksPlu5YN3B31BS4iV0ZYFiKoKg3k20=
 			</data>
 		</dict>
 		<key>Modules/Alamofire.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			hi2cQEOilVQj8mX+bkhXx3iBBQY=
+			</data>
 			<key>hash2</key>
 			<data>
-			JwGG9D7Bunl7X2R2e5E0/2q5ecwkQR6NeaadP40srUA=
+			oldUGiff+SukEH+IKC4cBSF47LI/ivkQ3739T89tE5g=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			9+bR/rFGM0n0Ox3ntXspFyjzlM0=
+			</data>
 			<key>hash2</key>
 			<data>
 			bQ1NaFSjDnQKmfBnz0iLAU0S1aeANnuzB6Y4GmMnR6k=
@@ -116,6 +152,10 @@
 		</dict>
 		<key>PrivacyInfo.xcprivacy</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			ovFJMFOLMjzh8DLJKmXncj8JIgU=
+			</data>
 			<key>hash2</key>
 			<data>
 			CNkOaUbb/qDQtbF/tlnXfu0j5EO3Rdjntbn6N4y3RHc=

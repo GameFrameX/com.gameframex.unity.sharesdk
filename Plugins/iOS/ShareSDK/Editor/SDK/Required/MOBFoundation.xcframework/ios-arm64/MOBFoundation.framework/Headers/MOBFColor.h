@@ -7,29 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
+#import <FlyVerifyCSDK/FlyVerifyCColor.h>
 
 /**
  *  颜色工具类
  */
-@interface MOBFColor : NSObject
-
-/**
- *  获取颜色对象
- *
- *  @param rgb RGB颜色值
- *
- *  @return 颜色对象
- */
-+ (UIColor *)colorWithRGB:(NSUInteger)rgb;
-
-/**
- *  获取颜色对象
- *
- *  @param argb ARGB颜色值
- *
- *  @return 颜色对象
- */
-+ (UIColor *)colorWithARGB:(NSUInteger)argb;
+@interface MOBFColor : FlyVerifyCColor
 
 @end

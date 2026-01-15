@@ -315,48 +315,48 @@
                        attachementUrl:(NSURL *)attachementUrl
                               hashtag:(NSString *)hashtag
                                 quote:(NSString *)quote
-                                showFromVC:(UIViewController *)showFromVC
+                           showFromVC:(UIViewController *)showFromVC
                             shareType:(SSDKFacebookShareType)shareType
                                  type:(SSDKContentType)type;
 /**
-*  设置Facebook分享参数
-*
-*  @param text             分享内容
-分享类型为Text类型时,作为文字主体内容
-分享类型为WebPage类型时,作为连接描述
-
-*  @param image            图片，可以为UIImage、NSString（图片路径）、NSURL（图片路径）、SSDKImage
-分享类型为Image类型时,若使用客户端分享,可传入 单张/多张 的 本地/网络 图片;如果不使用客户端分享,仅支持单张的本地/网络图片
-分享类型为App（应用邀请）时 只支持网络图片链接
-*【Facebook通过客户端分享图片,可不需依赖任何权限;否则需要申请publish_actions权限】*
-分享类型为WebPage类型时,无论是否使用客户端,仅支持单张的网络图片
-
-*  @param url              链接
-分享类型为WebPage类型时,为链接地址
-[如果分享的连接是AppStore/GooglePlay/Facebook个人/公共主页,所对应的图片,标题,描述等参数可能不会生效,而实际生效的是FB通过爬虫网络根据连接搜刮而来的信息]
-分享类型为Video类型时,需传入视频地址且但必须是相册地址
-
-*  @param title            链接标题
-分享类型为WebPage类型时,为链接标题
-
-*  @param urlName          连接名称
-分享类型为WebPage类型时,为链接名称,仅在非客户端分享时生效
-
-*  @param attachementUrl   附件链接(附加的媒体文件（SWF 或 MP3）的网址。如果是 SWF，还必须指定image以提供视频的缩略图)
-分享类型为WebPage类型时,为链,仅在非客户端分享时生效
-
-*  @param hashtag 话题标签
-开发者指定的话题标签，将添加至分享内容中。用户可决定是否在分享对话框中移除这种话题标签。话题标签应包含#符号，例如#facebook，不能是纯数字
-
-*  @param quote 话题标签
-随分享的链接一同显示的引文由用户自行高亮选择，也可由开发者预先定义(例如文章的醒目引文) 此参数只适用于链接分享类型
-
-*  @param sortShareTypes 设置分享优先级顺序，如sheet->native->web， 传@[@(SSDKFacebookShareTypeShareSheet),@(SSDKFacebookShareTypeNative),@(SSDKFacebookShareTypeBrowser)  ]或sheet->web->native,@[@(SSDKFacebookShareTypeShareSheet),@(SSDKFacebookShareTypeBrowser),@(SSDKFacebookShareTypeNative)  ],如果数组的最后一个元素为-1, 则在分享链结束仍然是分享失败的情况下，会默认执行接下来内部的优先级顺序，否则就停止执行
-
-*  @param type             分享类型
-当使用客户端分享时,支持Image、WebPage,Video类型
-当不适用客户端分享是,支持Text、Image、WebPage、App(应用邀请)类型
-*/
+ *  设置Facebook分享参数
+ *
+ *  @param text             分享内容
+ 分享类型为Text类型时,作为文字主体内容
+ 分享类型为WebPage类型时,作为连接描述
+ 
+ *  @param image            图片，可以为UIImage、NSString（图片路径）、NSURL（图片路径）、SSDKImage
+ 分享类型为Image类型时,若使用客户端分享,可传入 单张/多张 的 本地/网络 图片;如果不使用客户端分享,仅支持单张的本地/网络图片
+ 分享类型为App（应用邀请）时 只支持网络图片链接
+ *【Facebook通过客户端分享图片,可不需依赖任何权限;否则需要申请publish_actions权限】*
+ 分享类型为WebPage类型时,无论是否使用客户端,仅支持单张的网络图片
+ 
+ *  @param url              链接
+ 分享类型为WebPage类型时,为链接地址
+ [如果分享的连接是AppStore/GooglePlay/Facebook个人/公共主页,所对应的图片,标题,描述等参数可能不会生效,而实际生效的是FB通过爬虫网络根据连接搜刮而来的信息]
+ 分享类型为Video类型时,需传入视频地址且但必须是相册地址
+ 
+ *  @param title            链接标题
+ 分享类型为WebPage类型时,为链接标题
+ 
+ *  @param urlName          连接名称
+ 分享类型为WebPage类型时,为链接名称,仅在非客户端分享时生效
+ 
+ *  @param attachementUrl   附件链接(附加的媒体文件（SWF 或 MP3）的网址。如果是 SWF，还必须指定image以提供视频的缩略图)
+ 分享类型为WebPage类型时,为链,仅在非客户端分享时生效
+ 
+ *  @param hashtag 话题标签
+ 开发者指定的话题标签，将添加至分享内容中。用户可决定是否在分享对话框中移除这种话题标签。话题标签应包含#符号，例如#facebook，不能是纯数字
+ 
+ *  @param quote 话题标签
+ 随分享的链接一同显示的引文由用户自行高亮选择，也可由开发者预先定义(例如文章的醒目引文) 此参数只适用于链接分享类型
+ 
+ *  @param sortShareTypes 设置分享优先级顺序，如sheet->native->web， 传@[@(SSDKFacebookShareTypeShareSheet),@(SSDKFacebookShareTypeBrowser)  ]或sheet->web->native,@[@(SSDKFacebookShareTypeShareSheet),@(SSDKFacebookShareTypeBrowser)  ],如果数组的最后一个元素为-1, 则在分享链结束仍然是分享失败的情况下，会默认执行接下来内部的优先级顺序，否则就停止执行
+ 
+ *  @param type             分享类型
+ 当使用客户端分享时,支持Image、WebPage,Video类型
+ 当不适用客户端分享是,支持Text、Image、WebPage、App(应用邀请)类型
+ */
 - (void)SSDKSetupFacebookParamsByText:(NSString *)text
                                 image:(id)image
                                   url:(NSURL *)url
@@ -365,7 +365,7 @@
                        attachementUrl:(NSURL *)attachementUrl
                               hashtag:(NSString *)hashtag
                                 quote:(NSString *)quote
-                        sortShareTypes:(NSArray <NSNumber *>*)sortShareTypes
+                       sortShareTypes:(NSArray <NSNumber *>*)sortShareTypes
                                  type:(SSDKContentType)type;
 /**
  Facebook 分享参数 SSDKSetupFacebookParamsByText:image:url:urlTitle:urlName:attachementUrl:hashtag:quote:shareType:type的扩展
@@ -516,9 +516,9 @@
  *  @param boardName  Board名称
  */
 - (void)SSDKSetupPinterestParamsByImageUrl:(NSString *)imageUrl
-                                   desc:(NSString *)desc
-                                    url:(NSURL *)url
-                              boardName:(NSString *)boardName;
+                                      desc:(NSString *)desc
+                                       url:(NSURL *)url
+                                 boardName:(NSString *)boardName;
 
 
 
@@ -732,7 +732,7 @@
  @param androidExecParam 安卓扩展参数
  @param iosExecParam iOS扩展参数
  @param type 分享类型
-
+ 
  */
 - (void)SSDKSetupKakaoStoryParamsByContent:(NSString *)content
                                      title:(NSString *)title
@@ -742,7 +742,7 @@
                                   sharable:(BOOL)sharable
                           androidExecParam:(NSDictionary *)androidExecParam
                               iosExecParam:(NSDictionary *)iosExecParam
-                                      type:(SSDKContentType)type __attribute__((deprecated("ShareSDK 4.4.30 版本已弃用")));
+                                      type:(SSDKContentType)type __attribute__((deprecated("ShareSDK 4.2.0 版本已弃用")));
 
 
 #pragma mark - LinkedIn
@@ -911,6 +911,42 @@
 #pragma mark - WhatsApp
 
 /**
+ *  设置WhatsApp Business分享参数
+ *
+ *  @param text  分享文本
+ *  @param image 分享图片，可以为UIImage、NSString（图片路径）、NSURL（图片路径）、SSDKImage。
+ *  @param audio 分享音频, 可以为NSData、NSString、NSURL（文件路径）、SSDKData、注：只允许指定本地资源
+ *  @param video 分享视频, 可以为NSData、NSString、NSURL（文件路径）、SSDKData、注：只允许指定本地资源
+ *  @param point 分享菜单的显示位置，仅用于iPad版
+ *  @param type  分享类型，仅支持Text、Image、Audio、Video
+ */
+- (void)SSDKSetupWhatsAppBusinessParamsByText:(NSString *)text
+                                        image:(id)image
+                                        audio:(id)audio
+                                        video:(id)video
+                             menuDisplayPoint:(CGPoint)point
+                                         type:(SSDKContentType)type;
+
+/**
+ *  设置WhatsApp Business分享参数
+ *
+ *  @param text  分享文本
+ *  @param image 分享图片，可以为UIImage、NSString（图片路径）、NSURL（图片路径）、SSDKImage。
+ *  @param audio 分享音频, 可以为NSData、NSString、NSURL（文件路径）、SSDKData、注：只允许指定本地资源
+ *  @param video 分享视频, 可以为NSData、NSString、NSURL（文件路径）、SSDKData、注：只允许指定本地资源
+ *  @param point 分享菜单的显示位置，仅用于iPad版
+ *  @param useSystem 是否使用系统提供的分享模块只针对分享文本，其他类型目前只有系统提供分享
+ *  @param type  分享类型，仅支持Text、Image、Audio、Video
+ */
+- (void)SSDKSetupWhatsAppBusinessParamsByText:(NSString *)text
+                                        image:(id)image
+                                        audio:(id)audio
+                                        video:(id)video
+                             menuDisplayPoint:(CGPoint)point
+                                    useSystem:(BOOL)useSystem
+                                         type:(SSDKContentType)type;
+
+/**
  *  设置WhatsApp分享参数
  *
  *  @param text  分享文本
@@ -1021,7 +1057,7 @@
  *  @param hashtag 唯一标识
  *  @param extraInfo 额外的数据
  *  @param mode 分享给抖音好友/群还是发布到抖音（注：目前分享到IM只支持传入一个图片，传入多图会变成发布，分享IM只支持图片或链接，不支持视频  -cl 2021-7-5）
-
+ 
  */
 
 
@@ -1109,18 +1145,18 @@
                       fileExtension:(NSString *)fileExtension
                                type:(SSDKContentType)type;
 /** 设置SnapChat分享参数
-
-
+ 
+ 
  * @param caption 标题
-
+ 
  * @param attachmentUrl 网页链接
-
+ 
  * @param image 可以为UIImage、NSString、NSURL、SSDKImage
-
+ 
  * @param video  视频，不可与图片混合，可以为NSString、NSURL、NSData
-
+ 
  * @param sticker 贴纸，可以为UIImage、NSString、NSURL、SSDKImage
-
+ 
  * @param stickerAnimated 贴纸是否是动画
  
  * @param stickerRotation 贴纸旋转的角度
@@ -1128,40 +1164,40 @@
  * @param cameraViewState 只有在没有视频或图片时有效 0. unknow 1.Front 2.Back
  
  * @param type 分享的类型
-*/
+ */
 - (void)SSDKSetupSnapChatParamsByCaption:(NSString *)caption
                            attachmentUrl:(NSString *)attachmentUrl
                                    image:(id)image
                                    video:(id)video
-                                sticker:(id)sticker
-                        stickerAnimated:(BOOL)stickerAnimated
-                        stickerRotation:(CGFloat)stickerRotation
+                                 sticker:(id)sticker
+                         stickerAnimated:(BOOL)stickerAnimated
+                         stickerRotation:(CGFloat)stickerRotation
                          cameraViewState:(NSInteger)cameraViewState
                                     type:(SSDKContentType)type;
 
 #pragma mark - 快手
 
 /** 设置快手分享参数
-
-
+ 
+ 
  * @param title 标题
-
+ 
  * @param desc 描述
-
+ 
  * @param linkURL 私信-点击的链接地址
-
+ 
  * @param thumbImage  私信-缩略图（不能超过1M）
-
+ 
  * @param openID 要查看的用户的openID，可选
-
+ 
  * @param receiverOpenID 接收方 openid , 可选，当不填时，快手 APP 会调启选择好友界面来确定接收方
  
  * @param localIdentifier 分享的相册图片/视频的相册标识（此参数和path互斥，如同时存在以localIdentifier为准）
-  
+ 
  * @param tags 视频分享-标签数组
  
  * @param type 分享的类型
-*/
+ */
 - (void)SSDKSetupKuaiShouShareParamsByTitle:(NSString *)title
                                        desc:(NSString *)desc
                                     linkURL:(NSString *)linkURL
@@ -1176,10 +1212,10 @@
 #pragma mark - 小红书
 
 /** 设置小红书分享参数
-    (此接口仅支图片分享，视频分享请使用系统分享接口)
-
+ (此接口仅支图片分享，视频分享请使用系统分享接口)
+ 
  * @param title 标题
-
+ 
  * @param desc 描述
  
  * @param image 可以为NSData,UIImage、NSString、NSURL、SSDKImage，NSArray
@@ -1189,11 +1225,11 @@
  
  例:
  @{@"videoObj":@"path1",@"coverObj":@"imgPath"}
-
+ 
  * @param type 分享的类型
-*/
+ */
 - (void)SSDKSetupXHSShareParamsByTitle:(NSString *)title
-                                   desc:(NSString *)desc
+                                  desc:(NSString *)desc
                                  image:(id)image
                                  video:(id)video
                                   type:(SSDKContentType)type;
@@ -1204,14 +1240,14 @@
  * @param title 标题
  * @param dataPath 文件路径
  * @param type 分享的类型
-*/
+ */
 - (void)SSDKSetupTumblrShareParamsByTitle:(NSString *)title
                                  dataPath:(NSString *)dataPath
                                      type:(SSDKContentType)type;
 #pragma mark - 插件
 /** 设置插件通用参数
  * @param shareParams 通用参数
-*/
+ */
 - (void)SSDKSetupCommonShareParams:(NSMutableDictionary*)shareParams;
 
 #pragma mark - Deprecated

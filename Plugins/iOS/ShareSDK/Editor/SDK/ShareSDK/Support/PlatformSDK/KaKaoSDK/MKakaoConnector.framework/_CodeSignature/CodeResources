@@ -18,19 +18,27 @@
 		</data>
 		<key>Modules/MKakaoConnector.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		k6IAZ/kbrFjSFtYjHLucWxwPVfY=
+		k+tHl861vYTrx4JZTaBmQ3Z8cww=
 		</data>
 		<key>Modules/MKakaoConnector.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		gcwBsH4BgyFY4sVtNt+/xOKS3vY=
+		CxJmIjXhcZtjHGjkAyZju2cqhoU=
+		</data>
+		<key>Modules/MKakaoConnector.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
+		<data>
+		k0dXt/sxhtzhgLG/tDaaQ2E7VH4=
 		</data>
 		<key>Modules/MKakaoConnector.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
 		wUYewohJ4zyEykn5e4rBXQ/f1Pc=
 		</data>
+		<key>Modules/MKakaoConnector.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
+		<data>
+		k0dXt/sxhtzhgLG/tDaaQ2E7VH4=
+		</data>
 		<key>Modules/MKakaoConnector.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		1qoZUF4lFjwq46q97I+ZjFAKT9A=
+		lQhCsmu6luzWmAc7Ttc9sdYB1uQ=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -65,22 +73,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			k6IAZ/kbrFjSFtYjHLucWxwPVfY=
+			k+tHl861vYTrx4JZTaBmQ3Z8cww=
 			</data>
 			<key>hash2</key>
 			<data>
-			lANj1lqaN1AmTOy6g+Lr8GSwOX5QUxIgMfNdCfuTivY=
+			4wLUuBoSdnBEUJeUsNoNFWMJjUJVGBF+lGldnkVYZrY=
 			</data>
 		</dict>
 		<key>Modules/MKakaoConnector.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			gcwBsH4BgyFY4sVtNt+/xOKS3vY=
+			CxJmIjXhcZtjHGjkAyZju2cqhoU=
 			</data>
 			<key>hash2</key>
 			<data>
-			Qnesa0n4URGWAopawg9bGx36dUwkYV00BoCJ8LFzlyg=
+			lknV2iDIyiRZHY3hPidDDR8qqKf5dESF8rk6BP4ilY0=
+			</data>
+		</dict>
+		<key>Modules/MKakaoConnector.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			k0dXt/sxhtzhgLG/tDaaQ2E7VH4=
+			</data>
+			<key>hash2</key>
+			<data>
+			DjCo3FjWh2Gz1x3h69IimpV1uD0BShb9P6X/ipEbb4I=
 			</data>
 		</dict>
 		<key>Modules/MKakaoConnector.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -94,15 +113,26 @@
 			38U4ChoPMgkj9RqRFqeJUBQm4oRJcdXOZhpiHRYQbfY=
 			</data>
 		</dict>
+		<key>Modules/MKakaoConnector.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			k0dXt/sxhtzhgLG/tDaaQ2E7VH4=
+			</data>
+			<key>hash2</key>
+			<data>
+			DjCo3FjWh2Gz1x3h69IimpV1uD0BShb9P6X/ipEbb4I=
+			</data>
+		</dict>
 		<key>Modules/MKakaoConnector.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			1qoZUF4lFjwq46q97I+ZjFAKT9A=
+			lQhCsmu6luzWmAc7Ttc9sdYB1uQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			ZdBWlNcKRKoX8oj0DWWPgtP1Yxtic15n3RqLqQ8FpIw=
+			3PFp8zMaX1jyl2FgePwy7ZO+iKk1xUgsf0VpZEOpycY=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
