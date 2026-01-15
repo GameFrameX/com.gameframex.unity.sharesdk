@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/gameframex/com.gameframex.unity.sharesdk/compare/1.1.0...1.2.0) (2026-01-15)
+
+
+### Features
+
+* **ShareSDK:** 更新iOS ShareSDK插件及配置 ([a28112a](https://github.com/gameframex/com.gameframex.unity.sharesdk/commit/a28112a4ea3455cec6a4a2d7e83a469ee049f887))
+
 # [1.1.0](https://github.com/gameframex/com.gameframex.unity.sharesdk/compare/1.0.1...1.1.0) (2025-12-23)
 
 
