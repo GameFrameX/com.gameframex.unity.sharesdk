@@ -654,7 +654,7 @@ namespace cn.sharesdk.unity3d
 #endif
         }
 
-        public void SetSinaCardImageAndroid(JsonData jsonobject)
+        public void SetSinaCardImageAndroid(LitJson.JsonData jsonobject)
         {
             shareParams["lc_image"] = jsonobject;
         }
